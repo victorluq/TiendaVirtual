@@ -1,0 +1,46 @@
+.fondo{
+    background-image: url(../../assets/Img/img6.jpg);
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    width: 100%;
+}
+
+@media (max-width: 767.98px) {
+    .fondo{
+      background-size: 100% auto; /* Asegura que la imagen se vea completa en horizontal */
+    }
+  }
+
+.categorias{
+    background-color: #33394180;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    margin-top: 20rem;
+    
+}
+
+.titulo{
+    padding: 1rem;
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+    .titulo{
+      font-size: 1rem; /* Tamaño más pequeño en formato de pantalla celular */
+    }
+  }
+
+.productos{
+    padding-top: 13rem;
+}
+
+.btn{
+  border-radius: 0%;
+}

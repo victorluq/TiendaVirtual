@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.fondo{
+    background-color: #ffffffd8;
+    padding-bottom: 3rem;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    height: 45px;
+    top: 0;
+    padding: 10px 5%;
+    
+    
+}
+header ul {
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+header nav .menu ul {
+    /*posicion absolute para que se posicione debajo del resto del header - top medida del header*/
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    overflow: hidden;
+    list-style: none;
+    background:  #ffffffdc;
+    height: 0px;
+    transition: height 0.5s ease;
+}
+header nav .menu  ul li {
+    position: relative;
+} 
+
+header nav .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 5%;
+    line-height: 28px;
+    display: block;
+    
+    
+}
+header nav .menu  ul li a:hover {
+    color: #000000;
+    
+    
+} 
+/*animación del menu que se desplega*/
+header nav .menu input[type="checkbox"]:checked ~ ul {
+    height: 240px;
+    transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -o-transition: height 0.5s ease-in-out;
+    -webkit-transition: height 0.5s ease-in-out;
+}
+header nav .menu {
+    padding-top: 3px;
+}
+/*checkbox transparente y en primer plano*/
+header nav .menu input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+}
+/*span -lineas del menu hamburguesa-*/
+header nav .menu span {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    margin-bottom: 6.5px;
+    position: relative;
+    background: rgb(0, 0, 0);
+    z-index: 1;
+    transform-origin: 3px 0px;
+    transition: transform 0.5s ease,
+        opacity 0.55s ease;
+}
+header nav .menu span:first-child {
+    transform-origin: 0% 0%;
+}
+header nav .menu span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+/*movimiento a cruz*/
+header nav .menu input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(2px, 1px);
+}
+header nav .menu input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+header nav .menu input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(1px, 0px);
+}
+/*menu simple con tamaño menor a 1000px*/
+@media screen and (min-width: 1000px){
+    header nav .menu ul {
+        position: relative;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        background: unset;
+        height: unset;
+    }
+    header nav .menu  ul li {
+        padding: 5px 10px;
+        display: inline-block;
+        
+        
+    } 
+   
+
+    header nav .menu ul li::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #000000;
+        transition: width 0.3s ease;
+    }
+
+    header nav .menu ul li:hover::before {
+        width: 100%;
+    }
+
+    header nav .menu ul li a {
+        padding: unset;
+        line-height: unset;
+    }
+    header nav .menu  ul li a:hover {
+        color: unset;
+    } 
+    header nav .menu input {
+        display: none;
+    }
+    header nav .menu span {
+        display: none;
+    }
+}
+
+.login{
+    color:#000000;
+    padding: 0.2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.buscar{
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.menu{
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.desplegable{
+    margin-left: 1.5rem;
+}
+
+@media (max-width: 767.98px) {
+    .mobile-margin {
+      margin-left:3rem; /* Puedes ajustar el valor del margen según tus necesidades */
+    }
+  }
+
+.fa-layers-counter {
+    background: rgb(255, 106, 0); /* Color de fondo del contador */
+    color: white; /* Color del texto del contador */
+    border-radius: 100%; /* Estilo de borde para hacerlo circular */
+    font-size: 0.6rem; /* Tamaño de fuente inicial */
+    padding: 0.1rem 0.15rem; /* Relleno inicial */
+    transform: translate(2.5rem, -2rem);
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: calc(1 + .1 / var(--font-body-scale));
+}
+
+/* Ajustar el tamaño de fuente y el relleno según el número de dígitos */
+.fa-layers-counter:after {
+    content: attr(data-count); /* Obtener el número de dígitos del atributo data-count */
+    font-size: calc(0.6rem - 0.1rem * (1 - min(1, (attr(data-count) - 1) / 9)));
+    padding: 0.1rem 0.3rem;
+    display: inline-block;
+    line-height: 1;
+}

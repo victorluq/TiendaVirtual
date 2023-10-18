@@ -1,0 +1,117 @@
+.titulo{
+    padding: 1rem;
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 2rem;
+    font-weight: bold;
+    color: #020202;
+    padding-top: 4rem;
+}
+
+@media (max-width: 767.98px) {
+    .titulo{
+      font-size: 1rem; /* Tamaño más pequeño en formato de pantalla celular */
+    }
+  }
+
+.content{
+    padding: 2rem;
+}
+
+.card-title{
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #050505;
+    margin: 0.1rem;
+    margin-top: -0.5rem;
+}
+
+.card-pesos{
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #717070;
+    margin: 0.1rem;
+}
+
+.card-text{
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 1rem;
+    font-weight: bold;
+    color: #050505;
+    margin: 0.1rem;
+    padding-bottom: 0.5rem;
+}
+
+.fondo {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    background-color: #ffffff24; /* Eliminamos la transparencia del color de fondo */
+    width: 100%;
+}
+
+.fondo::before {
+    content: "";
+    background-image: url(../../assets/Img/fondo2.jpg);
+    background-color: #ffffff75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.card{
+    border-radius: 0%;
+    border: none;
+    --bs-card-bg: transparent;
+}
+
+.card-img-top{
+    border-radius: 0%;
+}
+
+.btn{
+    border-radius: 0%;
+    color:#333941e5;
+    border-color: #333941e5;
+    
+  }
+
+.btn:hover{
+    background-color:#333941e5;
+    color:#ffffff;
+}
+
+
+.subrayar {
+    position: relative; /* Necesario para posicionar la línea */
+}
+
+.subrayar::before {
+    content: "";
+    position: absolute;
+    left: 0; /* Comienza desde la izquierda */
+    bottom: -0.1rem; /* Coloca la línea justo debajo del texto */
+    width: 0; /* Ancho inicial */
+    height: 2px; /* Grosor de la línea subrayada */
+    background-color: #474849; /* Color de la línea subrayada */
+    transition: width 0.3s ease; /* Animación de crecimiento */
+    
+}
+
+.subrayar:hover::before {
+    width: 100%; /* Ancho al 100% cuando se hace hover */
+}
+
+.vertodo{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+

@@ -1,0 +1,25 @@
+<div class="fondo">
+    <div>
+        <div class="text-center">
+            <h1 class="titulo">{{miTienda?.nombre_prod1}}</h1> 
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col d-flex align-items-center justify-content-center" *ngFor="let producto1 of miProducto1">
+            <div class="content">
+                <div class="card subrayar" style="width: 18rem;">
+                    <img [src]="producto1.imgprod1" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{producto1.nombre}}</h5>
+                        <p class="card-pesos">${{producto1.precio}}</p>
+                        <p class="card-text">Talles: {{producto1.talles}}</p>                        
+                        <button class="btn btn-outline-light" (click)="add(producto1)">Añadir al carrito <i class="fa-solid fa-bag-shopping fa-lg login"></i></button>
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+        <a href="#" class="btn btn-outline-light vertodo" routerLink="/dashboard-prod1">Ver Todos</a>
+    </div>
+</div>

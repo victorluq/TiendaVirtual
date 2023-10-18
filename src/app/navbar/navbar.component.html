@@ -1,0 +1,43 @@
+<body>
+    <div class="container">
+    <div class="row">
+    <header class="fondo navbar fixed-top">
+        <div class="order-1 order-lg-0 mobile-margin">
+        <ul style="list-style:none" class="list-group-horizontal list-group">
+            <li><a class="navbar-brand" href="#inicio"><i class="fa-brands fa-slack fa-xl login"></i></a></li>
+        </ul>
+        </div>
+        <div class="order-0 order-lg-1">
+            <nav>
+                <div class="menu">
+                    <input type="checkbox" id="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul>
+                        <li class="desplegable"><a href="#inicio">INICIO</a></li>
+                        <li class="desplegable"><a href="#sobreNosotros">SOBRE NOSOTROS</a></li>
+                        <li class="desplegable"><a href="#productos">PRODUCTOS</a></li>
+                        <li class="desplegable"><a href="#Contacto">CONTACTO</a></li>
+                    </ul>
+                </div>            
+            </nav>
+        </div>
+        <div class="order-2 order-lg-2">
+        <ul style="list-style:none" class="list-group-horizontal list-group barramenu">
+            <li><i class="fa-solid fa-magnifying-glass fa-lg login"></i></li>
+            <li><i class="fa-solid fa-user fa-lg login"></i></li>                    
+            <li>
+                <a routerLink="/carrito">
+                    <span class="fa-layers fa-fw">
+                        <i class="fa-solid fa-bag-shopping fa-lg login"></i>
+                        <span class="fa-layers-counter fa-lg" [attr.data-count]="cartItemCount"></span>
+                    </span>
+                </a>
+            </li>  
+        </ul>
+        </div> 
+    </header>
+    </div>
+    </div>
+</body>

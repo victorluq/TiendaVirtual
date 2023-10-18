@@ -1,0 +1,93 @@
+<div class="fondo">
+<app-navbar></app-navbar>
+<div class="container">
+<div class="text-center">
+    <h1 class="titulo1">CARRITO</h1>
+</div>
+<div class="text-center carrito" *ngIf="cart.length === 0">
+    <div class="circle">
+      <i class="fa-solid fa-bag-shopping fa-2xl"></i>
+    </div>
+   <h4>Tu carrito está vacío.</h4>
+   <button class="btn btn-outline-light" [routerLink]="['']">Volver a la Tienda</button>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="container tabla-items col-12 col-md-12 col-lg-8 col-xl-8 text-center" *ngIf="cart.length > 0">
+    <table class="table">
+        <tbody>
+          <tr *ngFor="let item of cart">
+            <td scope="row" style="display: flex;" class="align-middle">
+                <div>
+                    <img [src]="item.imgprod1" class="card-img" alt="...">
+                </div>
+                <div class="texto-items align-middle">
+                    <h6 class="card-title">{{item.nombre}}</h6>
+                    <h6 class="card-pesos">AR$ {{item.precio}}</h6>
+                    <h6 class="card-text">Talle:{{item.talles}}</h6>
+                </div>
+            </td>
+            <td class="align-middle quantity">
+                <div class="quantity-number-v2 clearfix">
+                    <div class="quantity-wrapper">
+                      <i class="add-down add-action fa fa-minus add-action" (click)="decrementQuantity(item)"></i>
+                      <input id="prodQuantity" type="text" name="quantity" class="text-center card-text" [(ngModel)]="item.quantity"/>
+                      <i class="add-up add-action fa fa-plus add-action" (click)="incrementQuantity(item)"></i>
+                    </div>
+                    <div id="stock" class="text-center"></div>
+                </div>
+            </td>
+            <td class="card-pesos align-middle totalparcial">
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-10 col-xl-10">AR$ {{ item.total.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</div>
+                  <div class="col-12 col-md-12 col-lg-2 col-xl-2 delete d-flex justify-content-center align-middle"><i class="fa-regular fa-trash-can" (click)="removeItem(item)"></i></div>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<div class="container tabla-recuadro col-12 col-md-4 col-lg-4 col-xl-4 text-center" *ngIf="cart.length > 0">
+  <div class="text-center">
+    <h4 class="titulo2">TOTAL DEL CARRITO:</h4>
+  </div>
+    <table class="table">
+    <tbody>
+        <tr>
+          <th scope="row card-pesos align-middle" class="align-middle subtotal">SUBTOTAL</th>
+          <td>
+             <h4 class="card-pesos totalparcial">AR$ {{ subtotal.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</h4> 
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="align-middle subtotal">MÉTODO DE ENVÍO</th>
+          <td>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Seleccione</option>
+              <option value="1">Envío</option>
+              <option value="2">Retiro</option>              
+            </select>
+          </td>
+        </tr>
+        <tr class="totalizacion">
+          <th scope="row" class="align-middle subtotal">TOTAL</th>
+          <td colspan="2">
+            <h4 class="card-pesostotal totalparcial">AR& {{ total.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) }}</h4>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="text-center">
+      <button class="btn btn-outline-light">Finalizar Compra</button>
+    </div>
+</div>
+</div>
+</div>
+<div class="container text-center return" *ngIf="cart.length > 0">
+  <button class="btn btn-outline-light" [routerLink]="['']">Volver a la Tienda</button>
+</div>
+<app-footer></app-footer>
+</div>
+
+

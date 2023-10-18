@@ -1,0 +1,53 @@
+{
+    "nombre_prod1": "NUESTRAS REMERAS OVERSIZE",
+    "producto1": [
+        {
+            "id": 1,
+            "imgprod1": "../../assets/Img/prod1_img1.jpg",
+            "nombre": "Remera Oversize Estampa",
+            "color": "Negro",
+            "precio": "7.980",
+            "talles": "S/M/L/XL"
+        },
+        {
+            "id": 2,
+            "imgprod1": "../../assets/Img/prod1_img2.jpg",
+            "nombre": "Remera Oversize Vendetta",
+            "color": "Blanco",
+            "precio": "7.980",
+            "talles": "S/M/L/XL"
+        },
+        {
+            "id": 3,
+            "imgprod1": "../../assets/Img/prod1_img3.jpg",
+            "nombre": "Remera Oversize Black",
+            "color": "Negro",
+            "precio": "7.980",
+            "talles": "S/M/L/XL"
+        },
+        {
+            "id": 4,
+            "imgprod1": "../../assets/Img/prod1_img4.jpg",
+            "nombre": "Remera Oversize Cotton",
+            "color": "Blanco",
+            "precio": "7.980",
+            "talles": "S/M/L/XL"
+        },
+        {
+            "id": 5,
+            "imgprod1": "../../assets/Img/prod1_img5.jpg",
+            "nombre": "Remera Oversize Legal",
+            "color": "Negro",
+            "precio": "7.980",
+            "talles": "S/M/L/XL"
+        },
+        {
+            "id": 6,
+            "imgprod1": "../../assets/Img/prod1_img6.jpg",
+            "nombre": "Remera Oversize Stone",
+            "color": "Blanco",
+            "precio": "7.980",
+            "talles": "S/M/L/XL"
+        }
+    ]
+}

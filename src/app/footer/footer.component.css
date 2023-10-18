@@ -1,0 +1,35 @@
+section.footer{
+    padding-top: 1rem;
+    color: #fcfdfd;
+    background-color: #333941e5;
+}
+
+
+
+.redesfooter{
+    padding-top: 0.5rem;
+    
+}
+
+.list-group{
+    --bs-list-group-bg: transperent;
+    --bs-list-group-border-color: transperent;
+}
+
+.redes{
+    color: #ffffff; 
+    
+}
+.redes:hover{
+    color: #a4c5ece5;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.text-pequeño{
+    font-family: 'Microsoft Yi Baiti';
+    font-size: 1rem;    
+    color: #ffffff;
+    
+}
+
